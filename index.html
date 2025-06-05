@@ -4,12 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, orientation=portrait, viewport-fit=cover">
-    <!-- 화면 회전 방지 메타 태그 추가 -->
-    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-    <title>Project_DCase</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    
+
     <style>
       /* 웹폰트 정의 */
       @font-face {
@@ -115,22 +110,11 @@
       </div>
     </div>
     <script>
-      // 화면 회전 잠금 함수
-      function lockScreenOrientation() {
-        if (screen.orientation && screen.orientation.lock) {
-          screen.orientation.lock('portrait').catch(function(error) {
-            console.log('화면 회전 잠금 실패:', error);
-          });
-        }
-      }
 
       // 터치 이벤트 방지
       document.addEventListener('touchmove', function(e) {
         e.preventDefault();
       }, { passive: false });
-
-      // 페이지 로드 시 화면 회전 잠금 실행
-      document.addEventListener('DOMContentLoaded', lockScreenOrientation);
 
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/TestBuild.loader.js";
