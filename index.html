@@ -11,17 +11,32 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     
     <style>
+      /* 웹폰트 정의 */
+      @font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;
+        font-weight: 400;
+        src: url('TemplateData/NotoSans-Regular.ttf') format('truetype'),
+             local('Noto Sans KR Regular'),
+             local('NotoSansKR-Regular');
+        font-display: swap;
+      }
 
       @font-face {
         font-family: 'Noto Sans KR';
-        src: url('TemplateData/NotoSansKR-Medium.ttf') format('truetype');
-        font-weight: 500;
         font-style: normal;
+        font-weight: 500;
+        src: url('TemplateData/NotoSansKR-Medium.ttf') format('truetype'),
+             local('Noto Sans KR Medium'),
+             local('NotoSansKR-Medium');
         font-display: swap;
       }
+
       html {
         height: 100%;
         touch-action: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
       }
 
       body {
@@ -30,8 +45,7 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-        font-family: 'Noto Sans KR', sans-serif;
-        -webkit-text-size-adjust: none;
+        font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', sans-serif;
         background: #000;
         display: flex;
         justify-content: center;
@@ -39,9 +53,6 @@
         touch-action: none;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
       }
 
