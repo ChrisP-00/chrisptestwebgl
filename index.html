@@ -131,9 +131,11 @@
         companyName: "DefaultCompany",
         productName: "Project_DCase",
         productVersion: "1.0",
-        // WebGL 성능 설정 추가 nm
+        showBanner: false,
+        // WebGL 성능 설정
         powerPreference: "high-performance",
         devicePixelRatio: window.devicePixelRatio || 1,
+        // 캐시 컨트롤 설정 제거
       };
 
       var container = document.querySelector("#unity-container");
