@@ -200,8 +200,8 @@
             canvas.focus();
             
             // 디케이스 홈페이지로 이동하는 함수
-            window.goToHome = function() {
-                window.top.location.href = 'https://d-ca.se';
+            window.GoToMainPage = function () {
+              parent.location.href = "/";
             };
           }).catch((message) => {
             alert(message);
