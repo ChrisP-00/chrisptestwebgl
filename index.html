@@ -135,7 +135,14 @@
         // WebGL 성능 설정
         powerPreference: "high-performance",
         devicePixelRatio: window.devicePixelRatio || 1,
-        // 캐시 컨트롤 설정 제거
+        // WebAssembly 설정
+        wasmCodeUrl: buildUrl + "/TestBuild.wasm",
+        wasmFrameworkUrl: buildUrl + "/TestBuild.framework.js",
+        asmCodeUrl: buildUrl + "/TestBuild.asm.js",
+        asmMemoryUrl: buildUrl + "/TestBuild.asm.mem",
+        companyName: "DefaultCompany",
+        productName: "Project_DCase",
+        productVersion: "1.0"
       };
 
       var container = document.querySelector("#unity-container");
