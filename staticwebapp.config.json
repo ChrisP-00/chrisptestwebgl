@@ -1,4 +1,4 @@
-{
+﻿{
   "globalHeaders": {
     "content-security-policy": 
      "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' blob:; connect-src 'self' https://*; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:",
