@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <link rel="icon" type="image/x-icon" href="/TemplateData/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, orientation=portrait, viewport-fit=cover">
 
     <style>
       /* 웹폰트 정의 */
@@ -117,13 +116,13 @@
         e.preventDefault();
       }, { passive: false });
 
-      var buildUrl = "/Build";
-      var loaderUrl = buildUrl + "/BuildOutput.loader.js";
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/TestBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/BuildOutput.data",
-        frameworkUrl: buildUrl + "/BuildOutput.framework.js",
-        codeUrl: buildUrl + "/BuildOutput.wasm",
-        streamingAssetsUrl: "/StreamingAssets",
+        dataUrl: buildUrl + "/TestBuild.data",
+        frameworkUrl: buildUrl + "/TestBuild.framework.js",
+        codeUrl: buildUrl + "/TestBuild.wasm",
+        streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Project_DCase",
         productVersion: "1.0",
