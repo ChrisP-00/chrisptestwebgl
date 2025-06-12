@@ -116,13 +116,13 @@
         e.preventDefault();
       }, { passive: false });
 
-      var buildUrl = "/BuildOutput/Build";
+      var buildUrl = "/Build";
       var loaderUrl = buildUrl + "/TestBuild.loader.js";
       var config = {
         dataUrl: buildUrl + "/TestBuild.data",
         frameworkUrl: buildUrl + "/TestBuild.framework.js",
         codeUrl: buildUrl + "/TestBuild.wasm",
-        streamingAssetsUrl: "/BuildOutput/StreamingAssets",
+        streamingAssetsUrl: "/StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Project_DCase",
         productVersion: "1.0",

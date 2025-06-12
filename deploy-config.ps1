@@ -18,12 +18,12 @@ $configContent = @'
     ".mem": "application/octet-stream"
   },
   "navigationFallback": {
-    "rewrite": "/BuildOutput/index.html",
+    "rewrite": "/index.html",
     "exclude": ["/images/*.{png,jpg,gif}", "/css/*", "/*.{css,js,wasm,data,ttf,otf}"]
   },
   "routes": [
     {
-      "route": "/BuildOutput/Build/*.wasm",
+      "route": "/Build/*.wasm",
       "headers": {
         "Content-Type": "application/wasm",
         "Cache-Control": "public, max-age=86400",
@@ -31,7 +31,7 @@ $configContent = @'
       }
     },
     {
-      "route": "/BuildOutput/Build/*.data",
+      "route": "/Build/*.data",
       "headers": {
         "Content-Type": "application/octet-stream",
         "Cache-Control": "public, max-age=86400",
@@ -39,7 +39,7 @@ $configContent = @'
       }
     },
     {
-      "route": "/BuildOutput/Build/*.js",
+      "route": "/Build/*.js",
       "headers": {
         "Content-Type": "application/javascript",
         "Cache-Control": "public, max-age=86400",
@@ -47,7 +47,7 @@ $configContent = @'
       }
     },
     {
-      "route": "/BuildOutput/Build/*.mem",
+      "route": "/Build/*.mem",
       "headers": {
         "Content-Type": "application/octet-stream",
         "Cache-Control": "public, max-age=86400",
@@ -55,7 +55,7 @@ $configContent = @'
       }
     },
     {
-      "route": "/BuildOutput/TemplateData/*.ttf",
+      "route": "/TemplateData/*.ttf",
       "headers": {
         "Cache-Control": "public, max-age=31536000",
         "Content-Type": "font/ttf"
@@ -66,6 +66,6 @@ $configContent = @'
 '@
 
 # 현재 디렉토리에 파일 생성
-$configContent | Out-File -FilePath "staticwebapp.config.json" -Encoding UTF8
+$configContent | Out-File -FilePath "BuildOutput/staticwebapp.config.json" -Encoding UTF8
 
 Write-Host "staticwebapp.config.json 파일이 생성되었습니다." 
