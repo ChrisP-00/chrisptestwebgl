@@ -1,0 +1,71 @@
+# staticwebapp.config.json 파일 내용 저장
+$configContent = @'
+{
+  "globalHeaders": {
+    "content-security-policy": 
+     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' blob:; connect-src 'self' https://*; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:",
+    "Cache-Control": "no-cache",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "mimeTypes": {
+    ".wasm": "application/wasm",
+    ".js": "application/javascript",
+    ".data": "application/octet-stream",
+    ".json": "application/json",
+    ".map": "application/json",
+    ".ttf": "font/ttf",
+    ".otf": "font/otf",
+    ".mem": "application/octet-stream"
+  },
+  "navigationFallback": {
+    "rewrite": "/chrisptestwebgl/index.html",
+    "exclude": ["/images/*.{png,jpg,gif}", "/css/*", "/*.{css,js,wasm,data,ttf,otf}"]
+  },
+  "routes": [
+    {
+      "route": "/chrisptestwebgl/Build/*.wasm",
+      "headers": {
+        "Content-Type": "application/wasm",
+        "Cache-Control": "public, max-age=86400",
+        "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "route": "/chrisptestwebgl/Build/*.data",
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Cache-Control": "public, max-age=86400",
+        "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "route": "/chrisptestwebgl/Build/*.js",
+      "headers": {
+        "Content-Type": "application/javascript",
+        "Cache-Control": "public, max-age=86400",
+        "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "route": "/chrisptestwebgl/Build/*.mem",
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Cache-Control": "public, max-age=86400",
+        "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "route": "/chrisptestwebgl/TemplateData/*.ttf",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000",
+        "Content-Type": "font/ttf"
+      }
+    }
+  ]
+}
+'@
+
+# 현재 디렉토리에 파일 생성
+$configContent | Out-File -FilePath "staticwebapp.config.json" -Encoding UTF8
+
+Write-Host "staticwebapp.config.json 파일이 생성되었습니다." 
