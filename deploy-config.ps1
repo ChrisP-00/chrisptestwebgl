@@ -18,12 +18,12 @@ $configContent = @'
     ".mem": "application/octet-stream"
   },
   "navigationFallback": {
-    "rewrite": "/chrisptestwebgl/index.html",
+    "rewrite": "/BuildOutput/index.html",
     "exclude": ["/images/*.{png,jpg,gif}", "/css/*", "/*.{css,js,wasm,data,ttf,otf}"]
   },
   "routes": [
     {
-      "route": "/chrisptestwebgl/Build/*.wasm",
+      "route": "/BuildOutput/Build/*.wasm",
       "headers": {
         "Content-Type": "application/wasm",
         "Cache-Control": "public, max-age=86400",
@@ -31,7 +31,7 @@ $configContent = @'
       }
     },
     {
-      "route": "/chrisptestwebgl/Build/*.data",
+      "route": "/BuildOutput/Build/*.data",
       "headers": {
         "Content-Type": "application/octet-stream",
         "Cache-Control": "public, max-age=86400",
@@ -39,7 +39,7 @@ $configContent = @'
       }
     },
     {
-      "route": "/chrisptestwebgl/Build/*.js",
+      "route": "/BuildOutput/Build/*.js",
       "headers": {
         "Content-Type": "application/javascript",
         "Cache-Control": "public, max-age=86400",
@@ -47,7 +47,7 @@ $configContent = @'
       }
     },
     {
-      "route": "/chrisptestwebgl/Build/*.mem",
+      "route": "/BuildOutput/Build/*.mem",
       "headers": {
         "Content-Type": "application/octet-stream",
         "Cache-Control": "public, max-age=86400",
@@ -55,7 +55,7 @@ $configContent = @'
       }
     },
     {
-      "route": "/chrisptestwebgl/TemplateData/*.ttf",
+      "route": "/BuildOutput/TemplateData/*.ttf",
       "headers": {
         "Cache-Control": "public, max-age=31536000",
         "Content-Type": "font/ttf"
