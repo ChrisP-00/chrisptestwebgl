@@ -16,12 +16,12 @@
     ".mem": "application/octet-stream"
   },
   "navigationFallback": {
-    "rewrite": "/index.html",
+    "rewrite": "/chrisptestwebgl/index.html",
     "exclude": ["/images/*.{png,jpg,gif}", "/css/*", "/*.{css,js,wasm,data,ttf,otf}"]
   },
   "routes": [
     {
-      "route": "/Build/*.wasm",
+      "route": "/chrisptestwebgl/Build/*.wasm",
       "headers": {
         "Content-Type": "application/wasm",
         "Cache-Control": "public, max-age=86400",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "route": "/Build/*.data",
+      "route": "/chrisptestwebgl/Build/*.data",
       "headers": {
         "Content-Type": "application/octet-stream",
         "Cache-Control": "public, max-age=86400",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "route": "/Build/*.js",
+      "route": "/chrisptestwebgl/Build/*.js",
       "headers": {
         "Content-Type": "application/javascript",
         "Cache-Control": "public, max-age=86400",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "route": "/Build/*.mem",
+      "route": "/chrisptestwebgl/Build/*.mem",
       "headers": {
         "Content-Type": "application/octet-stream",
         "Cache-Control": "public, max-age=86400",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "route": "/TemplateData/*.ttf",
+      "route": "/chrisptestwebgl/TemplateData/*.ttf",
       "headers": {
         "Cache-Control": "public, max-age=31536000",
         "Content-Type": "font/ttf"
